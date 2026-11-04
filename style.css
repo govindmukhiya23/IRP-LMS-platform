@@ -1,0 +1,402 @@
+/* IRP LMS - main stylesheet */
+
+:root {
+  --navy: #003366;
+  --orange: #fe781e;
+  --blue: #5f9fe0;
+  --light-blue: #e2f2fd;
+  --white: #ffffff;
+  --border: #d6e9ff;
+  --gray: #6b7a8c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--navy);
+  background: var(--white);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-box {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- top navigation ---------- */
+.topbar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px 20px;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.site-logo img {
+  height: 30px;
+}
+
+.site-logo span {
+  font-weight: normal;
+}
+
+.menu-links {
+  display: flex;
+  gap: 30px;
+}
+
+.menu-links a {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.menu-links a.current-page {
+  color: var(--orange);
+  border-bottom-color: var(--orange);
+}
+
+.login-btn {
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  padding: 7px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.main-btn {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  padding: 11px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background: #e5660f;
+}
+
+/* ---------- home introduction ---------- */
+.home-hero {
+  background: var(--light-blue) url("https://res.cloudinary.com/dwh7w9kz1/image/upload/v1793204857/Climbing_Towards_Success_dcuk4i.png") right center / cover no-repeat;
+  padding: 70px 0;
+}
+
+.small-title {
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.home-hero h1 {
+  font-size: 46px;
+  line-height: 1.15;
+  margin-bottom: 15px;
+}
+
+.orange-text {
+  color: var(--orange);
+}
+
+.home-hero p {
+  color: var(--blue);
+  max-width: 420px;
+  margin-bottom: 25px;
+}
+
+/* ---------- learning steps ---------- */
+.learning-steps {
+  padding: 50px 0 70px;
+}
+
+.learning-steps h2 {
+  font-size: 28px;
+}
+
+.small-text {
+  color: var(--blue);
+  font-size: 14px;
+  margin: 5px 0 25px;
+}
+
+.step-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.step-box {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 16px;
+  background: var(--white);
+}
+
+.step-count {
+  color: var(--orange);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.step-box h3 {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.step-box p {
+  color: var(--blue);
+  font-size: 13px;
+}
+
+/* ---------- page heading (courses + contact) ---------- */
+.page-head {
+  background: var(--light-blue) url("https://res.cloudinary.com/dwh7w9kz1/image/upload/v1793204868/Minimalist_E-learning_Banner_with_Graduation_Cap_l9jd7u.png") right center / contain no-repeat;
+  padding: 50px 0;
+}
+
+.page-head h1 {
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.page-head p {
+  color: var(--blue);
+  max-width: 420px;
+}
+
+/* ---------- course list ---------- */
+.course-section {
+  padding: 40px 0 60px;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.course-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0, 51, 102, 0.08);
+}
+
+.course-box iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  display: block;
+}
+
+.course-box h3 {
+  font-size: 15px;
+  margin: 12px 0 4px;
+}
+
+.course-box p {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.more-courses {
+  grid-column: span 2;
+  background: var(--light-blue);
+  border-radius: 10px;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.more-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dot-pattern {
+  width: 24px;
+  height: 24px;
+  background-image: radial-gradient(circle, var(--orange) 2.5px, transparent 3px);
+  background-size: 8px 8px;
+}
+
+.more-courses h3 {
+  font-size: 16px;
+}
+
+.more-courses p {
+  color: var(--blue);
+  font-size: 13px;
+}
+
+/* ---------- contact ---------- */
+.contact-section {
+  padding: 40px 0 60px;
+}
+
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.info-box {
+  background: var(--light-blue);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.info-box h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.info-box p {
+  font-size: 13px;
+  color: var(--blue);
+}
+
+.info-box h4 {
+  color: var(--orange);
+  font-size: 14px;
+  margin-top: 22px;
+}
+
+.message-box {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.message-box h2 {
+  font-size: 22px;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  margin-top: 14px;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.field textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.full-btn {
+  width: 100%;
+  margin-top: 18px;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .step-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .course-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .more-courses {
+    grid-column: span 2;
+  }
+
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-box {
+    justify-content: center;
+  }
+
+  .home-hero h1 {
+    font-size: 32px;
+  }
+
+  .step-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .course-list {
+    grid-template-columns: 1fr;
+  }
+
+  .more-courses {
+    grid-column: span 1;
+  }
+
+  .page-head {
+    background-image: none;
+  }
+
+  .input-row {
+    grid-template-columns: 1fr;
+  }
+}
